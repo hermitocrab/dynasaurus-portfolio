@@ -1,0 +1,24 @@
+{
+  "name": "DynaSaurus",
+  "short_name": "DynaSaurus",
+  "description": "Personalized AI language learning with vocabulary, translation, grammar feedback, and IELTS speaking practice.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "categories": ["education", "productivity"],
+  "background_color": "#0B0B10",
+  "theme_color": "#6C5CE7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

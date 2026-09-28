@@ -1,0 +1,16 @@
+# ads.txt — Authorized Digital Sellers (IAB spec)
+# https://iabtechlab.com/ads-txt/
+#
+# STATUS: intentionally empty. No ad network is authorized yet
+# (NEXT_PUBLIC_ADS_ENABLED is off), and placeholder IDs must never be published:
+# a wrong publisher ID can get the real account flagged or blocked.
+#
+# When the free-tier ad slot goes live, replace the commented example below with
+# the exact line the network gives you. Get it from the network's own dashboard —
+# do not hand-type an ID from memory.
+#
+# AdSense example (replace with the real pub- id from AdSense → Account → Account information):
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Baidu 联盟 example (replace with the real ID from 百度联盟后台 → 媒体信息):
+# baidu.com, XXXXXXXXXXXXXXXX, DIRECT

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Kee Lee — DynaSaurus</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+    background: #0a0a0c;
+    color: #f0f0f3;
+    min-height: 100dvh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 100%; max-width: 360px;
+    background: linear-gradient(165deg, #1c1c22 0%, #16161c 100%);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 28px;
+    padding: 40px 32px 32px;
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+
+  .emoji-mark { font-size: 48px; line-height: 1; margin-bottom: 16px; }
+
+  h1 {
+    font-size: 28px; font-weight: 700; letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+
+  .tagline {
+    font-size: 15px; color: rgba(240,240,243,0.55); font-weight: 400;
+    letter-spacing: 0.01em; margin-bottom: 28px;
+  }
+
+  .qr-wrap {
+    display: inline-block; background: #fff; padding: 12px; border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(167,139,250,0.15);
+  }
+
+  .qr-wrap img { width: 180px; height: 180px; display: block; }
+
+  .qr-label {
+    font-size: 12px; color: rgba(240,240,243,0.35); letter-spacing: 0.04em;
+    text-transform: uppercase; margin-bottom: 24px;
+  }
+
+  .actions { display: flex; flex-direction: column; gap: 10px; }
+
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 16px 20px; border-radius: 16px;
+    font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+    border: none; cursor: pointer; text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn:active { transform: scale(0.97); }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(167,139,250,0.25);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.06);
+    color: rgba(240,240,243,0.8);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .btn-icon { font-size: 20px; }
+
+  .hint {
+    font-size: 12px; color: rgba(240,240,243,0.3);
+    margin-top: 20px; letter-spacing: 0.02em;
+  }
+
+  .url-display {
+    font-size: 13px; color: rgba(240,240,243,0.4);
+    font-family: "SF Mono", "Menlo", monospace; letter-spacing: 0.02em;
+    margin-top: 6px;
+  }
+
+  .brand-strip {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    margin-top: 32px;
+    font-size: 13px; color: rgba(240,240,243,0.35); letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="emoji-mark">🦕</div>
+  <h1>Kee Lee</h1>
+  <div class="tagline">DynaSaurus — Your Dynamic Thesaurus</div>
+
+  <div class="qr-wrap">
+    <img src="img/dynasaurus-qr.png" alt="Scan for DynaSaurus" width="180" height="180">
+  </div>
+
+  <div class="qr-label">📷 Scan to explore</div>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="shareCard()">
+      <span class="btn-icon">📤</span> Share via…
+    </button>
+    <a class="btn btn-secondary" href="https://dynasaurus.rkrk.io/intro">
+      <span class="btn-icon">🦕</span> Open DynaSaurus
+    </a>
+  </div>
+
+  <div class="hint">Works on all devices — no app needed</div>
+  <div class="url-display">dynasaurus.rkrk.io</div>
+
+  <div class="brand-strip">
+    <span>🦕</span> DynaSaurus · AI Language Tutor
+  </div>
+</div>
+
+<script>
+async function shareCard() {
+  const data = {
+    title: 'Kee Lee — DynaSaurus',
+    text: 'Your words. Your world. The AI language tutor that explains vocabulary through YOUR hobbies, YOUR level, YOUR language.',
+    url: 'https://dynasaurus.rkrk.io/intro'
+  };
+
+  if (navigator.share && navigator.canShare && navigator.canShare(data)) {
+    try { await navigator.share(data); } catch(e) {}
+  } else {
+    // Fallback: copy link
+    try {
+      await navigator.clipboard.writeText(data.url);
+      const btn = document.querySelector('.btn-primary');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✅ Link copied!';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    } catch(e) {}
+  }
+}
+</script>
+
+</body>
+</html>

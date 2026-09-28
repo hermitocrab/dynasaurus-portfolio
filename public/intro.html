@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How DynaSaurus Works | Personalized AI Language Tutor</title>
+<meta name="description" content="DynaSaurus is Kee Lee's personalized AI language-learning app for vocabulary, translation, grammar feedback, and IELTS speaking practice.">
+<meta name="author" content="Kee Lee">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0D0D0F">
+<link rel="canonical" href="https://dynasaurus.rkrk.io/intro">
+<link rel="author" href="https://dynasaurus.rkrk.io/about">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DynaSaurus">
+<meta property="og:title" content="How DynaSaurus Works | Personalized AI Language Tutor">
+<meta property="og:description" content="Vocabulary, translation, grammar feedback, and IELTS speaking practice adapted to your level, first language, and interests.">
+<meta property="og:url" content="https://dynasaurus.rkrk.io/intro">
+<meta property="og:image" content="https://dynasaurus.rkrk.io/opengraph-image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DynaSaurus — personalized AI language tutor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How DynaSaurus Works | Personalized AI Language Tutor">
+<meta name="twitter:description" content="Vocabulary, translation, grammar feedback, and IELTS speaking practice adapted to you.">
+<meta name="twitter:image" content="https://dynasaurus.rkrk.io/opengraph-image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://dynasaurus.rkrk.io/intro#webpage",
+  "url": "https://dynasaurus.rkrk.io/intro",
+  "name": "How DynaSaurus Works",
+  "description": "DynaSaurus is Kee Lee's personalized AI language-learning web app.",
+  "inLanguage": "en",
+  "dateModified": "2026-09-25",
+  "author": {
+    "@type": "Person",
+    "@id": "https://dynasaurus.rkrk.io/#creator",
+    "name": "Kee Lee",
+    "url": "https://rkrk.io"
+  },
+  "about": {
+    "@type": "WebApplication",
+    "@id": "https://dynasaurus.rkrk.io/#app",
+    "name": "DynaSaurus",
+    "alternateName": "词灵龙"
+  }
+}
+</script>
+<style>
+:root { --bg: #0a0a0c; --text: #f0f0f3; --text2: #8a8a92; --coral: #FF6B6B; --amber: #FFB347; --teal: #2DD4BF; --violet: #A78BFA; --blue: #60A5FA; --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+section { position: relative; overflow: hidden; }
+.hero { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 24px; background: linear-gradient(180deg, #0a0a0c 0%, #141018 50%, #0a0a0c 100%); }
+.hero-inner { max-width: 720px; }
+.emoji { font-size: 80px; margin-bottom: 24px; animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+.hero h1 { font-size: clamp(36px, 6vw, 72px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px; }
+.hero h1 span { background: linear-gradient(135deg, var(--coral), var(--amber)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.sub { font-size: clamp(16px, 2vw, 22px); color: var(--text2); max-width: 500px; margin: 0 auto 40px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--coral), #e55d2b); color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; padding: 16px 36px; border-radius: 999px; transition: transform 0.2s, box-shadow 0.2s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,107,107,0.35); }
+.scroll-hint { margin-top: 48px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.5; transition: opacity 0.3s; cursor: pointer; }
+.scroll-hint:hover { opacity: 0.9; }
+.scroll-text { font-size: 12px; color: var(--text2); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+.scroll-arrow { font-size: 20px; color: var(--text2); animation: bounce-down 2s ease-in-out infinite; }
+@keyframes bounce-down { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+.persona { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; padding: 80px 24px; }
+.persona-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+@media (max-width: 768px) { .persona-inner { grid-template-columns: 1fr; gap: 40px; } .persona { padding: 60px 20px; } }
+.persona-visual { position: relative; }
+.persona-visual img { width: 100%; border-radius: 16px; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+.phone { position: absolute; bottom: -30px; right: -30px; width: 160px; background: #1a1a1e; border-radius: 24px; padding: 12px; border: 2px solid #2a2a33; box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+.phone .screen { background: #0d0d0f; border-radius: 14px; padding: 14px; font-size: 8px; line-height: 1.4; color: var(--text2); }
+.phone .lbl { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.copy h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+.copy h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 20px; }
+.copy p { font-size: clamp(15px, 1.5vw, 18px); color: var(--text2); line-height: 1.7; margin-bottom: 16px; }
+.tag { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-right: 8px; margin-bottom: 8px; }
+.rua { padding: 120px 24px; text-align: center; }
+.rua h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 16px; }
+.rua-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1000px; margin: 64px auto 0; }
+@media (max-width: 768px) { .rua-grid { grid-template-columns: 1fr; } }
+.rua-card { background: #111116; border: 1px solid #1e1e28; border-radius: 20px; padding: 40px 28px; text-align: left; transition: border-color 0.2s; }
+.rua-card:hover { border-color: #2a2a38; }
+.rua-card .letter { font-size: 48px; font-weight: 900; margin-bottom: 12px; line-height: 1; }
+.rua-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.rua-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+.stats { padding: 80px 24px; text-align: center; border-top: 1px solid #1a1a24; border-bottom: 1px solid #1a1a24; }
+.stats-grid { display: flex; gap: 64px; justify-content: center; flex-wrap: wrap; }
+.stat .num { font-size: clamp(40px, 5vw, 64px); font-weight: 900; letter-spacing: -0.02em; }
+.stat .label { font-size: 13px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; }
+.cta { padding: 120px 24px; text-align: center; }
+.cta h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 16px; }
+.cta p { color: var(--text2); font-size: 18px; margin-bottom: 40px; }
+.coming-soon { padding: 100px 24px; text-align: center; background: linear-gradient(180deg, #0a0a0c, #111118, #0a0a0c); }
+.coming-soon h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+.coming-soon .sub { margin-bottom: 60px; }
+.future-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto 60px; }
+.future-card { background: #111116; border: 1px solid #1e1e28; border-radius: 20px; padding: 36px 24px; text-align: center; position: relative; overflow: hidden; transition: border-color 0.3s; }
+.future-card:hover { border-color: #2a2a38; }
+.future-card .icon { font-size: 48px; margin-bottom: 16px; }
+.future-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.future-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+.badge-soon { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 14px; background: rgba(255,179,71,0.12); color: var(--amber); border: 1px solid rgba(255,179,71,0.2); animation: pulse-soon 2.5s ease-in-out infinite; }
+@keyframes pulse-soon { 0%,100% { opacity: 1; } 50% { opacity: .6; } }
+.badge-future { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 14px; background: rgba(167,139,250,0.12); color: var(--violet); border: 1px solid rgba(167,139,250,0.2); }
+.timeline { max-width: 700px; margin: 0 auto; text-align: left; }
+.timeline-item { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid #1e1e28; }
+.timeline-item:last-child { border: none; }
+.timeline-dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.timeline-dot.live { background: #00FF66; box-shadow: 0 0 12px rgba(0,255,102,0.4); }
+.timeline-dot.soon { background: var(--amber); }
+.timeline-dot.future { background: var(--violet); }
+.timeline-body h5 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.timeline-body p { font-size: 13px; color: var(--text2); }
+.pricing { padding: 100px 24px; text-align: center; background: linear-gradient(180deg, #0a0a0c, #10101a, #0a0a0c); }
+.pricing h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 50px auto 0; }
+.pricing-card { background: #111116; border: 1px solid #1e1e28; border-radius: 20px; padding: 36px 24px; text-align: left; transition: border-color 0.3s, transform 0.2s; position: relative; }
+.pricing-card:hover { border-color: #2a2a38; transform: translateY(-4px); }
+.pricing-card.featured { border-color: rgba(255,107,107,0.3); background: #141118; }
+.pricing-card .tier-name { font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+.pricing-card .price { font-size: 40px; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 4px; }
+.pricing-card .price span { font-size: 16px; font-weight: 400; color: var(--text2); }
+.pricing-card .period { font-size: 12px; color: var(--text2); margin-bottom: 20px; }
+.pricing-card .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
+.pricing-card .feature-list li { padding: 6px 0; font-size: 13px; color: var(--text2); }
+.pricing-card .feature-list li::before { content: '✓ '; color: var(--teal); }
+.pricing-card .feature-list li.na::before { content: '— '; color: #3a3a44; }
+.pricing-card .pricing-btn { display: block; text-align: center; padding: 12px 0; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+.pricing-btn.free { background: #1e1e28; color: var(--text2); }
+.pricing-btn.paid { background: linear-gradient(135deg, var(--coral), var(--amber)); color: #000; }
+.pricing-btn:hover { transform: translateY(-2px); }
+footer { padding: 40px 24px; text-align: center; border-top: 1px solid #1a1a24; }
+footer p { font-size: 13px; color: var(--text2); }
+footer a { color: var(--coral); text-decoration: none; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 20px; margin-top: 18px; }
+.footer-links a { font-size: 13px; color: var(--text2); }
+.footer-links a:hover { color: var(--text); }
+.persona-disclaimer { padding: 18px 24px; text-align: center; border-top: 1px solid #1a1a24; border-bottom: 1px solid #1a1a24; color: var(--text2); font-size: 13px; }
+.persona-disclaimer strong { color: var(--text); }
+.lang-picker { position: fixed; top: 16px; right: 16px; z-index: 100; background: rgba(10,10,12,0.85); backdrop-filter: blur(12px); border: 1px solid #1e1e28; border-radius: 10px; display: flex; gap: 2px; padding: 4px; }
+.lang-picker button { background: none; border: none; color: var(--text2); font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 7px; cursor: pointer; transition: all 0.15s; }
+.lang-picker button:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.lang-picker button.active { background: rgba(255,107,107,0.15); color: var(--coral); }
+
+/* KeeBot floating — fades in on scroll */
+.keebot-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 99;
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, var(--violet), var(--coral));
+  color: #fff; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 14px 24px; border-radius: 999px;
+  box-shadow: 0 8px 32px rgba(167,139,250,0.3);
+  opacity: 0; transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  cursor: pointer; border: none;
+}
+.keebot-float.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.keebot-float:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(167,139,250,0.45); }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="emoji">🦕</div>
+    <h1 data-i18n="heroTitle">Your Words.<br><span>Your World.</span></h1>
+    <p class="sub" data-i18n="heroSub">DynaSaurus explains vocabulary through YOUR hobbies, YOUR level, YOUR native language. Not a textbook. Not a robot. Your dynamic thesaurus.</p>
+    <div class="scroll-hint" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">
+      <span class="scroll-text">See how it works</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </div>
+</section>
+
+<aside class="persona-disclaimer" aria-label="Persona disclosure">
+  <strong>Illustrative examples:</strong> Kai, Maya, and Alex are sample learner personas used to show how personalization works. They are not customer testimonials or measured learning outcomes.
+</aside>
+
+<!-- ═══ KAI ═══ -->
+<section class="persona" style="background:linear-gradient(180deg,#0a0a0c,#1a1014,#0a0a0c);">
+  <div class="persona-inner">
+    <div class="persona-visual">
+      <img src="img/persona-kai.jpg" alt="Kai at the skatepark" loading="lazy">
+      <div class="phone"><div class="screen">
+        <div class="lbl" style="color:var(--coral);">🦕 DynaSaurus</div>
+        <strong style="color:#f0f0f3;">carving</strong><br>
+        🅁 Core Metaphor:<br>
+        "Like your trucks biting concrete — but on snow, the edge bites the mountain."<br>
+        🏀 Hobby threaded · Skateboarding
+      </div></div>
+    </div>
+    <div class="copy">
+      <h3 style="color:var(--coral);" data-i18n="kaiH3">🎯 Kai, 19 — Chengdu</h3>
+      <h2 data-i18n="kaiTitle">"I skate. But I'm watching snowboarding now."</h2>
+      <p data-i18n="kaiP1">Kai knows <em>carving</em> on concrete. But X-Games snowboard commentary hits different — same word, different world. DynaSaurus maps his skate vocabulary to snowboarding in seconds.</p>
+      <p data-i18n="kaiP2">Chinese skaters say 卡边. Snowboarders say 压刃. DynaSaurus catches the cross-linguistic trap before Kai repeats it.</p>
+      <span class="tag" style="background:rgba(255,107,107,0.15);color:var(--coral);" data-i18n="kaiTag1">Hobby threaded</span>
+      <span class="tag" style="background:rgba(255,179,71,0.1);color:var(--amber);" data-i18n="kaiTag2">Cross-linguistic</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAYA ═══ -->
+<section class="persona" style="background:linear-gradient(180deg,#0a0a0c,#0e1a1c,#0a0a0c);">
+  <div class="persona-inner">
+    <div class="copy">
+      <h3 style="color:var(--teal);" data-i18n="mayaH3">🤿 Maya, 24 — Bali</h3>
+      <h2 data-i18n="mayaTitle">"I dive with a tank. Now I want to dive without one."</h2>
+      <p data-i18n="mayaP1">Maya is PADI certified. Free diving is the next frontier. She hits <em>mammalian dive reflex</em> — a term that simply doesn't exist in scuba vocabulary. DynaSaurus gives her the bridge.</p>
+      <p data-i18n="mayaP2">Indonesian <em>selam</em> covers both scuba and free dive — one word, two worlds. DynaSaurus threads the explanation through physics she already knows.</p>
+      <span class="tag" style="background:rgba(45,212,191,0.1);color:var(--teal);" data-i18n="mayaTag1">L1-aware</span>
+      <span class="tag" style="background:rgba(96,165,250,0.1);color:var(--blue);" data-i18n="mayaTag2">Context mapped</span>
+    </div>
+    <div class="persona-visual">
+      <img src="img/persona-maya.png" alt="Maya diving" loading="lazy">
+      <div class="phone"><div class="screen">
+        <div class="lbl" style="color:var(--teal);">🦕 DynaSaurus</div>
+        <strong style="color:#f0f0f3;">mammalian dive reflex</strong><br>
+        🅄 3C — Collocation:<br>
+        "triggers the ~" · "activates the ~"<br>
+        🤿 Context: scuba → free diving
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ALEX ═══ -->
+<section class="persona" style="background:linear-gradient(180deg,#0a0a0c,#14101c,#0a0a0c);">
+  <div class="persona-inner">
+    <div class="persona-visual">
+      <img src="img/persona-alex.png" alt="Alex in the library" loading="lazy">
+      <div class="phone"><div class="screen">
+        <div class="lbl" style="color:var(--violet);">🦕 DynaSaurus</div>
+        <strong style="color:#f0f0f3;">intersectionality</strong><br>
+        🅁 Core Metaphor:<br>
+        "Like market segmentation — a person isn't just one identity."<br>
+        📚 Gender Studies 101
+      </div></div>
+    </div>
+    <div class="copy">
+      <h3 style="color:var(--violet);" data-i18n="alexH3">📚 Alex, 21 — Marketing Major</h3>
+      <h2 data-i18n="alexTitle">"I know market segmentation. What's intersectionality?"</h2>
+      <p data-i18n="alexP1">Alex takes a gender studies elective. Every reading hits <em>intersectionality</em>. Marketing textbooks never covered it. DynaSaurus anchors it to a concept Alex already owns.</p>
+      <p data-i18n="alexP2">Market segmentation: a consumer can't be reduced to one demographic. Intersectionality: a person can't be reduced to one identity category. The metaphor lands.</p>
+      <span class="tag" style="background:rgba(167,139,250,0.1);color:var(--violet);" data-i18n="alexTag1">Core metaphor</span>
+      <span class="tag" style="background:rgba(255,107,107,0.1);color:var(--coral);" data-i18n="alexTag2">🌈 Rainbow spectrum</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RUA ═══ -->
+<section class="rua">
+  <h2 data-i18n="ruaTitle">RUA: Your Learning Workflow</h2>
+  <p class="sub" data-i18n="ruaSub">Every word goes through three stages. Every stage is about YOU.</p>
+  <div class="rua-grid">
+    <div class="rua-card">
+      <div class="letter" style="color:var(--blue);">R</div>
+      <h4 data-i18n="ruaR">Recognise</h4>
+      <p data-i18n="ruaRDesc">Meaning. Form. Pronunciation. A core metaphor in <em>your</em> native language that helps connect the word to what you already know.</p>
+    </div>
+    <div class="rua-card">
+      <div class="letter" style="color:var(--violet);">U</div>
+      <h4 data-i18n="ruaU">Understand</h4>
+      <p data-i18n="ruaUDesc">Collocation. Contexts. Connotation. Every example sentence uses <em>your</em> hobby. Basketball. Diving. Marketing. Whatever you love.</p>
+    </div>
+    <div class="rua-card">
+      <div class="letter" style="color:var(--amber);">A</div>
+      <h4 data-i18n="ruaA">Apply</h4>
+      <p data-i18n="ruaADesc">Cross-linguistic mapping. Why your L1 makes this word tricky. Practice exercises. A thesaurus at your level — synonyms you can actually use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat"><div class="num" style="background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">4</div><div class="label" data-i18n="stats1">AI Modules</div></div>
+    <div class="stat"><div class="num" style="background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">11</div><div class="label" data-i18n="stats3">Language Settings</div></div>
+    <div class="stat"><div class="num" style="background:linear-gradient(135deg,var(--violet),var(--coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">6</div><div class="label" data-i18n="stats4">CEFR Levels</div></div>
+    <div class="stat"><div class="num" style="background:linear-gradient(135deg,var(--amber),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">A1→C2</div><div class="label" data-i18n="stats5">L1-Graded Support</div></div>
+    <div class="stat"><div class="num" style="background:linear-gradient(135deg,var(--teal),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">🌉</div><div class="label" data-i18n="stats6">Cross-Culture</div></div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta">
+  <h2 data-i18n="ctaTitle">Words explained <span style="background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">your way</span>.</h2>
+  <p data-i18n="ctaSub">Start without an account. Free includes 5 lookups per day; sign in to sync history across devices.</p>
+  <a href="https://dynasaurus.rkrk.io" class="btn" data-i18n="ctaBtn">🦕 Open DynaSaurus</a>
+</section>
+
+<!-- ═══ COMING SOON ═══ -->
+<section class="coming-soon">
+  <h2>🔮 What's Next</h2>
+  <p class="sub">We're building the future of cross-culture communication.</p>
+  <div class="future-grid">
+    <div class="future-card">
+      <div class="icon">🎥</div>
+      <h4>AI Video Chat</h4>
+      <p>Practice speaking with lifelike AI characters. Real-time feedback on pronunciation, fluency, and body language.</p>
+      <span class="badge-soon">Coming Soon</span>
+    </div>
+    <div class="future-card">
+      <div class="icon">🎭</div>
+      <h4>Licensed Character Tutors</h4>
+      <p>An exploratory concept that would depend on appropriate licensing agreements before release.</p>
+      <span class="badge-future">Future</span>
+    </div>
+    <div class="future-card">
+      <div class="icon">🔮</div>
+      <h4>AI Conversation Rooms</h4>
+      <p>Group practice with multiple AI peers. Simulate real conversations, debates, and role-play scenarios.</p>
+      <span class="badge-soon">Coming Soon</span>
+    </div>
+  </div>
+
+  <h2 style="margin-top:40px;">🗺️ Roadmap</h2>
+  <div class="timeline" style="margin-top:30px;">
+    <div class="timeline-item">
+      <div class="timeline-dot live"></div>
+      <div class="timeline-body">
+        <h5>v1 · Dictionary + Translator + Grammar + IELTS Coach</h5>
+        <p>4 AI modules. RUA-powered. Hobby-threaded. Cross-linguistic.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot live"></div>
+      <div class="timeline-body">
+        <h5>v2 · Cross-Culture Bridge · 11 Languages · Dark/Light Mode</h5>
+        <p>Smart Translator fused with cross-culture pipeline. Target language output. Gen-Z onboarding.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot live"></div>
+      <div class="timeline-body">
+        <h5>v3 · Audio Upload · Synced History</h5>
+        <p>Audio-file transcription and signed-in history sync across devices.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot future"></div>
+      <div class="timeline-body">
+        <h5>Planned · Paid Checkout · AI Video Chat · Conversation Rooms</h5>
+        <p>Roadmap concepts, not currently available product capabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="pricing">
+  <h2>💎 Plans</h2>
+  <p class="sub">Free is available now. Paid tiers and checkout are coming soon; planned features may change before launch.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="tier-name" style="color:var(--text2);">Free</div>
+      <div class="price">¥0</div>
+      <div class="period">Forever</div>
+      <ul class="feature-list">
+        <li>5 lookups/day</li>
+        <li>All 4 modules</li>
+        <li>Basic definitions</li>
+        <li>One language pair</li>
+        <li>History sync</li>
+        <li>Audio upload</li>
+      </ul>
+      <a href="/" class="pricing-btn free">Start Free</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="tier-name" style="color:var(--amber);">Basic</div>
+      <div class="price">¥29 <span>/mo</span></div>
+      <div class="period">Most popular</div>
+      <ul class="feature-list">
+        <li>Unlimited lookups</li>
+        <li>All 4 modules</li>
+        <li>Full history</li>
+        <li>B1+ Thesaurus</li>
+        <li>Cloud sync</li>
+        <li>Audio upload</li>
+      </ul>
+      <a href="/pricing" class="pricing-btn paid">Coming soon</a>
+    </div>
+    <div class="pricing-card">
+      <div class="tier-name" style="color:var(--coral);">Premium</div>
+      <div class="price">¥49 <span>/mo</span></div>
+      <div class="period">Power user</div>
+      <ul class="feature-list">
+        <li>Everything in Basic</li>
+        <li>Word audio playback</li>
+        <li>Audio upload</li>
+        <li>Priority support</li>
+        <li>Cloud sync</li>
+        <li>Paid checkout coming soon</li>
+      </ul>
+      <a href="/pricing" class="pricing-btn paid">Coming soon</a>
+    </div>
+    <div class="pricing-card">
+      <div class="tier-name" style="color:var(--violet);">Ultimate</div>
+      <div class="price">¥79 <span>/mo</span></div>
+      <div class="period">All access</div>
+      <ul class="feature-list">
+        <li>Everything in Premium</li>
+        <li>Early access features</li>
+        <li>Cloud sync</li>
+        <li>Priority support</li>
+        <li>Audio upload</li>
+        <li>Feature package being finalized</li>
+      </ul>
+      <a href="/pricing" class="pricing-btn paid">Coming soon</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p data-i18n="footer"><strong>DynaSaurus</strong> · Personalized AI Language Tutor · By <a href="https://rkrk.io">Kee Lee</a><br>RUA Framework · Hobby-Threaded · Cross-Linguistic</p>
+  <nav class="footer-links" aria-label="Product information">
+    <a href="/about">About</a>
+    <a href="/method/rua">RUA method</a>
+    <a href="/faq">FAQ</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/privacy">Privacy</a>
+  </nav>
+</footer>
+
+<!-- ═══ LANG PICKER ═══ -->
+<div class="lang-picker" id="langPicker">
+  <button data-lang="en" class="active">EN</button>
+  <button data-lang="zh-CN">简</button>
+  <button data-lang="zh-TW">繁</button>
+  <button data-lang="ko">한</button>
+  <button data-lang="fr">FR</button>
+  <button data-lang="ja">日</button>
+
+</div>
+
+<script>
+const i18n = {
+  en: {
+    heroTitle: 'Your Words.<br><span>Your World.</span>',
+    heroSub: "DynaSaurus explains vocabulary through YOUR hobbies, YOUR level, YOUR native language. Not a textbook. Not a robot. Your dynamic thesaurus.",
+    heroCTA: '🦕 Try DynaSaurus — Free',
+    kaiH3: '🎯 Kai, 19 — Chengdu',
+    kaiTitle: '"I skate. But I\'m watching snowboarding now."',
+    kaiP1: "Kai knows <em>carving</em> on concrete. But X-Games snowboard commentary hits different — same word, different world. DynaSaurus maps his skate vocabulary to snowboarding in seconds.",
+    kaiP2: "Chinese skaters say 卡边. Snowboarders say 压刃. DynaSaurus catches the cross-linguistic trap before Kai repeats it.",
+    kaiTag1: 'Hobby threaded', kaiTag2: 'Cross-linguistic',
+    mayaH3: '🤿 Maya, 24 — Bali',
+    mayaTitle: '"I dive with a tank. Now I want to dive without one."',
+    mayaP1: "Maya is PADI certified. Free diving is the next frontier. She hits <em>mammalian dive reflex</em> — a term that simply doesn&apos;t exist in scuba vocabulary. DynaSaurus gives her the bridge.",
+    mayaP2: "Indonesian <em>selam</em> covers both scuba and free dive — one word, two worlds. DynaSaurus threads the explanation through physics she already knows.",
+    mayaTag1: 'L1-aware', mayaTag2: 'Context mapped',
+    alexH3: '📚 Alex, 21 — Marketing Major',
+    alexTitle: '"I know market segmentation. What\'s intersectionality?"',
+    alexP1: "Alex takes a gender studies elective. Every reading hits <em>intersectionality</em>. Marketing textbooks never covered it. DynaSaurus anchors it to a concept Alex already owns.",
+    alexP2: "Market segmentation: a consumer can&apos;t be reduced to one demographic. Intersectionality: a person can&apos;t be reduced to one identity category. The metaphor lands.",
+    alexTag1: 'Core metaphor', alexTag2: '🌈 Rainbow spectrum',
+    ruaTitle: 'RUA: Your Learning Workflow',
+    ruaSub: 'Every word goes through three stages. Every stage is about YOU.',
+    ruaR: 'Recognise', ruaRDesc: 'Meaning. Form. Pronunciation. A core metaphor in <em>your</em> native language that connects the word to what you already know.',
+    ruaU: 'Understand', ruaUDesc: 'Collocation. Contexts. Connotation. Every example sentence uses <em>your</em> hobby. Basketball. Diving. Marketing. Whatever you love.',
+    ruaA: 'Apply', ruaADesc: 'Cross-linguistic mapping. Why your L1 makes this word tricky. Practice exercises. A thesaurus at your level — synonyms you can actually use.',
+    stats1: 'AI Modules', stats3: 'Language Settings', stats4: 'CEFR Levels', stats5: 'L1-Graded Support', stats6: 'Cross-Culture Communication',
+    ctaTitle: 'Words explained <span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">your way</span>.',
+    ctaSub: 'Start without an account. Free includes 5 lookups per day; sign in to sync history across devices.',
+    ctaBtn: '🦕 Open DynaSaurus',
+    footer: '<strong>DynaSaurus</strong> · Personalized AI Language Tutor · By <a href=\"https://rkrk.io\">Kee Lee</a><br>RUA Framework · Hobby-Threaded · Cross-Linguistic',
+  },
+  'zh-CN': {
+    heroTitle: '你的词语。<br><span>你的世界。</span>',
+    heroSub: 'DynaSaurus 通过你的爱好、你的水平、你的母语来解释词汇。不是教科书。不是机器人。你的动态词库。',
+    heroCTA: '🦕 免费试用 DynaSaurus',
+    kaiH3: '🎯 Kai，19岁 — 成都',
+    kaiTitle: '"我滑板。但现在我在看单板滑雪。"',
+    kaiP1: 'Kai 在水泥地上懂得 <em>carving</em>。但 X-Games 单板滑雪解说完全不同。DynaSaurus 在几秒内将他的滑板词汇映射到滑雪。',
+    kaiP2: '中国滑手说 卡边。滑雪者说 压刃。DynaSaurus 在 Kai 重复错误之前就捕捉到了跨语言陷阱。',
+    kaiTag1: '爱好串联', kaiTag2: '跨语言',
+    mayaH3: '🤿 Maya，24岁 — 巴厘岛',
+    mayaTitle: '"我用水肺潜水。现在我想不用设备潜水。"',
+    mayaP1: 'Maya 持有 PADI 证书。自由潜水是下一个领域。她遇到了 <em>mammalian dive reflex</em>——一个在潜水中根本不存在词。DynaSaurus 给她架起了桥梁。',
+    mayaP2: '印尼语里 <em>selam</em> 涵盖水肺潜水和自由潜水。DynaSaurus 通过她已掌握的水下物理知识来解释。',
+    mayaTag1: '母语感知', mayaTag2: '场景映射',
+    alexH3: '📚 Alex，21岁 — 市场营销专业',
+    alexTitle: '"我懂市场细分。什么是交叉性？"',
+    alexP1: 'Alex 选了一门性别研究选修课。每篇阅读都提到 <em>intersectionality</em>。DynaSaurus 将它锚定在 Alex 已经掌握的概念上。',
+    alexP2: '市场细分：消费者不能简化为一个人群特征。交叉性：一个人不能简化为一个身份类别。比喻瞬间打通。',
+    alexTag1: '核心意象', alexTag2: '🌈 彩虹光谱',
+    ruaTitle: 'RUA：你的学习流程',
+    ruaSub: '每个词经历三个阶段。每个阶段都围绕着你。',
+    ruaR: '识别 Recognise', ruaRDesc: '含义。形式。发音。一个用<em>你的</em>母语呈现、帮助连接已有知识的核心意象。',
+    ruaU: '理解 Understand', ruaUDesc: '搭配。语境。内涵。每个例句都使用<em>你的</em>爱好。篮球。潜水。市场营销。你热爱的任何事物。',
+    ruaA: '应用 Apply', ruaADesc: '跨语言映射。为什么你的母语让这个词变得困难。练习。分级词库。',
+    stats1: 'AI 模块', stats3: '语言设置', stats4: 'CEFR 等级', stats5: '按母语分级',
+    ctaTitle: '以<span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">你的方式</span>解释词语。',
+    ctaSub: '无需账号即可开始。免费套餐每天 5 次查询；登录后可同步云端历史。',
+    ctaBtn: '🦕 打开 DynaSaurus',
+    footer: '<strong>DynaSaurus</strong> · 个性化 AI 语言学习助手 · 由 <a href=\"https://rkrk.io\">Kee Lee</a> 创建<br>RUA 学习框架 · 兴趣串联 · 跨语言',
+  },
+  'zh-TW': {
+    heroTitle: '你的詞語。<br><span>你的世界。</span>',
+    heroSub: 'DynaSaurus 透過你的愛好、你的水平、你的母語來解釋詞彙。不是教科書。不是機器人。你的動態詞庫。',
+    heroCTA: '🦕 免費試用 DynaSaurus',
+    kaiH3: '🎯 Kai，19歲 — 成都', kaiTitle: '"我滑板。但現在我在看單板滑雪。"',
+    kaiP1: 'Kai 在水泥地上懂得 <em>carving</em>。DynaSaurus 在幾秒內將他的滑板詞彙映射到滑雪。',
+    kaiP2: '中國滑手說 卡邊。滑雪者說 壓刃。DynaSaurus 在 Kai 重複錯誤之前就捕捉到了跨語言陷阱。',
+    kaiTag1: '愛好串聯', kaiTag2: '跨語言',
+    mayaH3: '🤿 Maya，24歲 — 峇里島', mayaTitle: '"我用水肺潛水。現在我想不用設備潛水。"',
+    mayaP1: 'Maya 持有 PADI 證書。她遇到了 <em>mammalian dive reflex</em>。DynaSaurus 給她架起了橋樑。',
+    mayaP2: '印尼語裡 <em>selam</em> 涵蓋水肺潛水和自由潛水。DynaSaurus 通過她已掌握的水下物理知識來解釋。',
+    mayaTag1: '母語感知', mayaTag2: '場景映射',
+    alexH3: '📚 Alex，21歲 — 市場營銷專業', alexTitle: '"我懂市場細分。什麼是交叉性？"',
+    alexP1: 'Alex 選了一門性別研究選修課。DynaSaurus 將它錨定在 Alex 已經掌握的概念上。',
+    alexP2: '市場細分：消費者不能簡化為一個人群特徵。交叉性：一個人不能簡化為一個身份類別。比喻瞬間打通。',
+    alexTag1: '核心意象', alexTag2: '🌈 彩虹光譜',
+    ruaTitle: 'RUA：你的學習流程', ruaSub: '每個詞經歷三個階段。每個階段都圍繞著你。',
+    ruaR: '識別 Recognise', ruaRDesc: '含義。形式。發音。一個用<em>你的</em>母語呈現、幫助連結既有知識的核心意象。',
+    ruaU: '理解 Understand', ruaUDesc: '搭配。語境。內涵。每個例句都使用<em>你的</em>愛好。',
+    ruaA: '應用 Apply', ruaADesc: '跨語言映射。練習。分級詞庫。',
+    stats1: 'AI 模組', stats3: '語言設定', stats4: 'CEFR 等級', stats5: '按母語分級',
+    ctaTitle: '以<span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">你的方式</span>解釋詞語。',
+    ctaSub: '無需帳號即可開始。免費方案每天 5 次查詢；登入後可同步雲端歷史。',
+    ctaBtn: '🦕 打開 DynaSaurus',
+    footer: '<strong>DynaSaurus</strong> · 個性化 AI 語言學習助手 · 由 <a href=\"https://rkrk.io\">Kee Lee</a> 創建',
+  },
+  ko: {
+    heroTitle: '당신의 단어.<br><span>당신의 세계.</span>',
+    heroSub: 'DynaSaurus는 당신의 취미, 수준, 모국어를 통해 어휘를 설명합니다. 당신의 역동적인 시소러스.',
+    heroCTA: '🦕 DynaSaurus 무료 체험',
+    kaiH3: '🎯 Kai, 19 — 청두', kaiTitle: '"나는 스케이트를 타. 그런데 지금은 스노보드를 보고 있어."',
+    kaiP1: 'Kai는 콘크리트 위에서 <em>carving</em>을 압니다. DynaSaurus는 몇 초 만에 스노보드로 매핑합니다.',
+    kaiP2: '중국 스케이터들은 卡边. 스노보더들은 压刃. DynaSaurus가 함정을 잡아냅니다.',
+    kaiTag1: '취미 스레딩', kaiTag2: '교차 언어',
+    mayaH3: '🤿 Maya, 24 — 발리', mayaTitle: '"나는 스쿠버 다이빙을 해. 이제 장비 없이 다이빙하고 싶어."',
+    mayaP1: 'Maya는 PADI 자격증. <em>mammalian dive reflex</em>를 만납니다. DynaSaurus가 다리를 놓아줍니다.',
+    mayaP2: '인도네시아어 <em>selam</em>은 스쿠버와 프리다이빙을 모두 포함. DynaSaurus가 연결합니다.',
+    mayaTag1: 'L1 인식', mayaTag2: '맥락 매핑',
+    alexH3: '📚 Alex, 21 — 마케팅 전공', alexTitle: '"시장 세분화는 알아. 교차성이 뭐야?"',
+    alexP1: 'Alex는 성별 연구 과목을 듣습니다. DynaSaurus가 기존 개념에 고정시킵니다.',
+    alexP2: '시장 세분화와 교차성의 은유가 딱 들어맞습니다.',
+    alexTag1: '핵심 은유', alexTag2: '🌈 무지개 스펙트럼',
+    ruaTitle: 'RUA: 당신의 학습 흐름', ruaSub: '모든 단어는 세 단계를 거칩니다.',
+    ruaR: '인식 Recognise', ruaRDesc: '의미. 형태. 발음. <em>모국어</em>로 된 핵심 은유.',
+    ruaU: '이해 Understand', ruaUDesc: '연어. 맥락. 함축. 모든 예문이 <em>당신의</em> 취미를 사용.',
+    ruaA: '적용 Apply', ruaADesc: '교차 언어 매핑. 수준에 맞는 동의어 시소러스.',
+    stats1: 'AI 모듈', stats3: '언어 설정', stats4: 'CEFR 레벨', stats5: 'L1 등급 지원',
+    ctaTitle: '단어를 <span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">당신의 방식</span>으로.',
+    ctaSub: '계정 없이 시작할 수 있습니다. 무료 플랜은 하루 5회 조회이며, 클라우드 기록 동기화에는 로그인이 필요합니다.',
+    ctaBtn: '🦕 DynaSaurus 열기',
+    footer: '<strong>DynaSaurus</strong> · 개인 맞춤형 AI 언어 학습 도구 · <a href=\"https://rkrk.io\">Kee Lee</a>',
+  },
+  fr: {
+    heroTitle: 'Tes Mots.<br><span>Ton Monde.</span>',
+    heroSub: 'DynaSaurus explique le vocabulaire à travers TES loisirs, TON niveau, TA langue maternelle. Ton thésaurus dynamique.',
+    heroCTA: '🦕 Essayer DynaSaurus — Gratuit',
+    kaiH3: '🎯 Kai, 19 — Chengdu', kaiTitle: '"Je skate. Mais maintenant je regarde du snowboard."',
+    kaiP1: 'Kai connaît le <em>carving</em> sur béton. DynaSaurus transpose son vocabulaire au snowboard en secondes.',
+    kaiP2: 'Les skateurs chinois disent 卡边. Les snowboarders disent 压刃. DynaSaurus détecte le piège.',
+    kaiTag1: 'Loisir intégré', kaiTag2: 'Interlinguistique',
+    mayaH3: '🤿 Maya, 24 — Bali', mayaTitle: '"Je plonge en bouteille. Maintenant je veux plonger sans."',
+    mayaP1: 'Maya est certifiée PADI. Elle découvre le <em>réflexe d&apos;immersion</em>. DynaSaurus fait le pont.',
+    mayaP2: 'En indonésien, <em>selam</em> couvre plongée et apnée — un mot, deux mondes.',
+    mayaTag1: 'Adapté L1', mayaTag2: 'Contexte mappé',
+    alexH3: '📚 Alex, 21 — Étudiant Marketing', alexTitle: '"Je connais la segmentation. C&apos;est quoi l&apos;intersectionnalité ?"',
+    alexP1: 'Alex suit un cours d&apos;études de genre. DynaSaurus ancre l&apos;intersectionnalité dans un concept connu.',
+    alexP2: 'Segmentation et intersectionnalité — la métaphore fait tilt.',
+    alexTag1: 'Métaphore clé', alexTag2: '🌈 Spectre arc-en-ciel',
+    ruaTitle: 'RUA : Ton parcours d’apprentissage', ruaSub: 'Chaque mot passe par trois étapes.',
+    ruaR: 'Reconnaître', ruaRDesc: 'Sens. Forme. Prononciation. Une métaphore dans <em>ta</em> langue.',
+    ruaU: 'Comprendre', ruaUDesc: 'Collocation. Contextes. Connotation. Exemples avec <em>ton</em> loisir.',
+    ruaA: 'Appliquer', ruaADesc: 'Cartographie interlinguistique. Thésaurus à ton niveau.',
+    stats1: 'Modules IA', stats3: 'Paramètres de langue', stats4: 'Niveaux CEFR', stats5: 'Support L1 gradué',
+    ctaTitle: 'Des mots expliqués <span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">à ta façon</span>.',
+    ctaSub: 'Commence sans compte. Le forfait gratuit inclut 5 recherches par jour ; la synchronisation cloud nécessite une connexion.',
+    ctaBtn: '🦕 Ouvrir DynaSaurus',
+    footer: '<strong>DynaSaurus</strong> · Outil d’apprentissage des langues IA personnalisé · Par <a href=\"https://rkrk.io\">Kee Lee</a>',
+  },
+  ja: {
+    heroTitle: 'あなたの言葉。<br><span>あなたの世界。</span>',
+    heroSub: 'DynaSaurusはあなたの趣味、レベル、母語を通して語彙を説明します。あなたのダイナミック・シソーラス。',
+    heroCTA: '🦕 DynaSaurusを無料で試す',
+    kaiH3: '🎯 Kai, 19 — 成都', kaiTitle: '"スケートしてる。でも今はスノボを見てる。"',
+    kaiP1: 'Kaiはコンクリートでの<em>カービング</em>を知っている。DynaSaurusは数秒でスノボにマッピング。',
+    kaiP2: '中国のスケーターは卡边。スノーボーダーは压刃。DynaSaurusがトラップをキャッチ。',
+    kaiTag1: '趣味スレッディング', kaiTag2: '言語間',
+    mayaH3: '🤿 Maya, 24 — バリ', mayaTitle: '"スクーバダイビングをする。今度は器材なしで潜りたい。"',
+    mayaP1: 'MayaはPADI認定。<em>哺乳類潜水反射</em>に出会う。DynaSaurusが橋を架ける。',
+    mayaP2: 'インドネシア語の<em>selam</em>は両方カバー。DynaSaurusが水中物理で紡ぐ。',
+    mayaTag1: 'L1対応', mayaTag2: '文脈マッピング',
+    alexH3: '📚 Alex, 21 — マーケティング専攻', alexTitle: '"市場セグメンテーションは知ってる。インターセクショナリティって何？"',
+    alexP1: 'Alexはジェンダー研究を取っている。DynaSaurusが既存の概念に接地させる。',
+    alexP2: '市場セグメンテーションとインターセクショナリティ。比喩が完璧にハマる。',
+    alexTag1: 'コアイメージ', alexTag2: '🌈 虹スペクトラム',
+    ruaTitle: 'RUA：あなたの学習フロー', ruaSub: '全ての言葉が三つの段階を通る。',
+    ruaR: '認識 Recognise', ruaRDesc: '意味。形。発音。<em>あなたの</em>母語でのコアイメージ。',
+    ruaU: '理解 Understand', ruaUDesc: 'コロケーション。文脈。含意。例文は<em>あなたの</em>趣味。',
+    ruaA: '応用 Apply', ruaADesc: '言語間マッピング。レベルに合ったシソーラス。',
+    stats1: 'AI モジュール', stats3: '言語設定', stats4: 'CEFR レベル', stats5: 'L1 段階サポート',
+    ctaTitle: '言葉を<span style=\"background:linear-gradient(135deg,var(--coral),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;\">あなたの方法</span>で。',
+    ctaSub: 'アカウントなしで始められます。無料プランは1日5回まで。クラウド履歴の同期にはログインが必要です。',
+    ctaBtn: '🦕 DynaSaurusを開く',
+    footer: '<strong>DynaSaurus</strong> · パーソナライズされた AI 言語学習ツール · <a href=\"https://rkrk.io\">Kee Lee</a>',
+  },
+};
+
+let currentLang = localStorage.getItem('dynasaurus_lang') || 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('dynasaurus_lang', lang);
+  document.documentElement.lang = lang;
+  const t = i18n[lang] || i18n.en;
+  document.querySelectorAll('#langPicker button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (t[el.dataset.i18n]) el.innerHTML = t[el.dataset.i18n];
+  });
+}
+
+document.querySelectorAll('#langPicker button').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+setLang(currentLang);
+
+// KeeBot floating — fades in after scrolling past hero
+const kb = document.createElement('a');
+kb.className = 'keebot-float';
+kb.href = '#';
+kb.innerHTML = '🦄 Talk to Keebot';
+kb.onclick = function(e) {
+  e.preventDefault();
+  var w = window.open('', 'keebot', 'width=420,height=680');
+  if (w) {
+    w.document.write('<html><head><title>KeeBot</title><style>body{margin:0;height:100vh;overflow:hidden;}</style></head><body><iframe src="https://dynasaurus.rkrk.io?embed=1" style="width:100%;height:100%;border:none;"></iframe></body></html>');
+  }
+};
+document.body.appendChild(kb);
+var kbShown = false;
+window.addEventListener('scroll', function() {
+  if (!kbShown && window.scrollY > window.innerHeight * 0.6) {
+    kbShown = true;
+    kb.classList.add('visible');
+  }
+});
+</script>
+
+</body>
+</html>
